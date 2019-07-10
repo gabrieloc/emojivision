@@ -19,8 +19,6 @@ You'll notice that the included color map has far fewer entries than the compreh
 3. Get the emoji associated with that color value from a precomputed dictionary of colors to emojis
 4. Draw the emoji in the rect occupied by the current pixel with dimension specified by `resolution`
 
-For your convenience, code at the end of the file outputs your artwork to `~/Documents/Shared Playground Data/out.png`. Note that this directory needs to exist beforehand 🙄.
-
-- gabrieloc 
+For your convenience, code at the end of the file outputs your artwork to `~/Documents/Shared Playground Data/out.png`. Note that this directory needs to exist beforehand 🙄. 
 
 PS: this was done as a proof of concept and the right way to do things would be to offload more to the GPU, such as finding nearest colors and rendering of emojis 🤷‍♂️
