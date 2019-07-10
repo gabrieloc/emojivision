@@ -277,9 +277,9 @@ PlaygroundPage.current.liveView = view
 // Writes output to file
 
 let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
-let image = renderer.image { ctx in
+let rendered = renderer.image { ctx in
   view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
 }
 let writePath = playgroundSharedDataDirectory.appendingPathComponent("out.png")
-try image.pngData()!.write(to: writePath)
+try rendered.pngData()!.write(to: writePath)
 print("wrote to \(writePath)")
