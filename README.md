@@ -5,12 +5,14 @@ A 200 something line Swift Playground for rendering images as emojis.
 ![emojivision](mona.png)
 
 At the top of the file are a few constants:
-`imageFileName` - The input image
-`colorMapName` - The palette to sample from 
-`emojiFileName` - The file to generate the palette from
-`resolution` - EmojiDensity™
+- `imageFileName` - The input image
+- `colorMapName` - The palette to sample from 
+- `emojiFileName` - The file to generate the palette from
+- `resolution` - EmojiDensity™
 
-Included in the source is a dump of all iOS12 emojis (sourced from [EmojiDump](https://github.com/liuyuning/DumpEmoji)). The function `generateColorMap` reads that file and exports a newline-separated text file containing the dominant color in each emoji. That output file is then specified by `colorMapName`. You'll note that the included color map has far fewer entries than the comprehensive emoji dump, which is a performance requirement. Here's how it works:
+Included in the source is a dump of all iOS12 emojis (sourced from [EmojiDump](https://github.com/liuyuning/DumpEmoji)). The function `generateColorMap` reads that file and exports a newline-separated text file containing the dominant color in each emoji to  `~/Documents/Shared Playground Data/colormap.txt`. You can replace that file if you want to populate your palette with more emojis, but you'll need to update the file specified by `colorMapName` if you want it to be used.
+
+You'll notice that the included color map has far fewer entries than the comprehensive emoji dump, which is a performance requirement. Here's how it works:
 
 1. Go through every few pixels of the image (specified by `resolution`) and get the color of that pixel
 2. Treating each color's rgb as a 3d vector, compare the euclidian distance of that color with every color in the provided palette, and get the color with the nearest distance
