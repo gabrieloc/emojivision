@@ -2,6 +2,9 @@
 
 A 200 something line Swift Playground for rendering images as emojis.
 
+**Update**
+Emojivision is now out for iOS! [Get it here!](https://apps.apple.com/us/app/emojivision/id1472824315)
+
 ![emojivision](mona.png)
 
 At the top of the file are a few constants:
